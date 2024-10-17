@@ -1,0 +1,73 @@
+.footer {
+  width: 93%;
+  background-color: #2a5c9d;
+  color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.flists {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.flist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.flistItem {
+  cursor: pointer;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.flistItem:hover {
+  color: #ff5a5f;
+}
+
+.fText {
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .flists {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .flist {
+      align-items: center;
+  }
+
+  .footer {
+      padding: 20px; /* Reduced padding for smaller screens */
+      gap: 20px; /* Reduced gap between items */
+  }
+}
+
+@media (max-width: 480px) {
+  .flistItem {
+      font-size: 12px; /* Smaller font size for very small screens */
+  }
+
+  .fText {
+      font-size: 12px; /* Adjust text size for better readability */
+  }
+
+  .footer {
+      padding: 15px; /* Further reduced padding */
+  }
+}

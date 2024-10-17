@@ -1,0 +1,143 @@
+.project {
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.project h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+  animation: fadeIn 1s ease-out;
+}
+
+.projectContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.projectDetail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  max-width: 800px;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectDetail:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.projectName {
+  flex: 1;
+  padding-right: 15px;
+}
+
+.projectName h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #222;
+  animation: fadeIn 1s ease-out;
+}
+
+.projectName p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.projectImage {
+  flex: 1;
+  text-align: right;
+}
+
+.projectImage img {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  border-radius: 8px;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeInUp 0.8s ease-out 0.4s forwards, scaleUp 0.8s ease-out 0.4s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Responsive design for tablets */
+@media (max-width: 768px) {
+  .projectDetail {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .projectImage {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 480px) {
+  .project {
+    padding: 15px;
+  }
+
+  .project h1 {
+    font-size: 1.5rem;
+  }
+
+  .projectName h2 {
+    font-size: 1.25rem;
+  }
+
+  .projectName p {
+    font-size: 0.9rem;
+  }
+
+  .projectImage img {
+    max-width: 100%;
+    margin-top: 10px;
+  }
+}

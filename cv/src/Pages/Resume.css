@@ -1,0 +1,38 @@
+/* Main container for the resume page */
+.resume {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f0f0f0;
+    height: 100vh;
+  }
+  
+  /* Style for the ResumeSidebar component */
+  .resume > div:first-child {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  /* Style for the LeftBarResume component */
+  .resume > div:last-child {
+    flex: 2;
+  }
+  
+  /* Responsive Design for smaller screens */
+  @media (max-width: 768px) {
+    .resume {
+      flex-direction: column;
+      height: auto;
+      padding: 10px;
+    }
+  
+    .resume > div:first-child {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .resume > div:last-child {
+      flex: 1;
+    }
+  }
+  

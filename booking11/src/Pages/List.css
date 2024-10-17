@@ -1,0 +1,150 @@
+.listContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.listWrapper {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  gap: 20px;
+}
+
+.listSearch {
+  flex: 1;
+  background-color: #c0baac;
+  padding: 10px;
+  border-radius: 10px;
+  position: sticky;
+  top: 10px;
+  height: max-content;
+}
+
+.lsTitle {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.lsItem {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.lsItem > label {
+  font-size: 12px;
+}
+
+.lsItem > input {
+  height: 30px;
+  border: none;
+  padding: 5px;
+}
+
+.lsItem > span {
+  height: 30px;
+  padding: 5px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.lsOptions {
+  padding: 10px;
+}
+
+.lsOptionItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #555;
+  font-size: 12px;
+}
+
+.lsOptionInput {
+  width: 50px;
+}
+
+.listSearch > button {
+  padding: 10px;
+  background-color: #0071c2;
+  color: white;
+  border: none;
+  width: 100%;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.listResult {
+  flex: 3;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .listWrapper {
+    flex-direction: column; /* Stack elements vertically */
+  }
+
+  .listSearch {
+    margin-bottom: 20px; /* Add margin for spacing */
+  }
+
+  .lsTitle {
+    font-size: 18px; /* Reduce title font size */
+  }
+
+  .lsItem > label {
+    font-size: 11px; /* Reduce label font size */
+  }
+
+  .lsItem > input {
+    height: 28px; /* Adjust input height */
+  }
+
+  .lsItem > span {
+    height: 28px; /* Adjust span height */
+  }
+
+  .lsOptionItem {
+    font-size: 11px; /* Reduce option item font size */
+  }
+
+  .listSearch > button {
+    padding: 8px; /* Adjust button padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .listSearch {
+    padding: 8px; /* Reduce padding */
+  }
+
+  .lsTitle {
+    font-size: 16px; /* Further reduce title font size */
+  }
+
+  .lsItem > label {
+    font-size: 10px; /* Further reduce label font size */
+  }
+
+  .lsItem > input {
+    height: 25px; /* Further adjust input height */
+  }
+
+  .lsItem > span {
+    height: 25px; /* Further adjust span height */
+  }
+
+  .lsOptionItem {
+    font-size: 10px; /* Further reduce option item font size */
+  }
+
+  .listSearch > button {
+    padding: 6px; /* Further adjust button padding */
+    font-size: 14px; /* Adjust button font size */
+  }
+}

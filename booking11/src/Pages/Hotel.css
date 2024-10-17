@@ -1,0 +1,169 @@
+/* Container for the entire Hotel page */
+.hotel {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.hotelContainer {
+  padding: 20px;
+}
+
+.hotelHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hotelTitle {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.hotelLocation {
+  font-size: 1.2rem;
+  color: gray;
+  margin: 5px 0;
+}
+
+.hotelBtn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.hotelBtn:hover {
+  background-color: #0056b3;
+}
+
+/* Styles for hotelCompo section */
+.hotelCompo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.hotelImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Styles for hotelRent section */
+.hotelRent {
+  margin-bottom: 20px;
+}
+
+.hotelRenting {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.hSpan {
+  display: block;
+  font-size: 1rem;
+  color: gray;
+}
+
+/* Styles for hotelDetailPrice section */
+.hotelDetailPrice {
+  text-align: center;
+}
+
+.hotelDetailPrice h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.hotelDetailPrice span {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.hotelDetailPrice h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .hotelHeader {
+    margin-bottom: 10px; /* Reduce margin for smaller screens */
+  }
+
+  .hotelTitle {
+    font-size: 1.8rem; /* Reduce title font size */
+  }
+
+  .hotelLocation {
+    font-size: 1rem; /* Reduce location font size */
+  }
+
+  .hotelRenting {
+    font-size: 1.3rem; /* Adjust font size for renting section */
+  }
+
+  .hotelCompo {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust grid for smaller screens */
+    gap: 5px; /* Reduce gap */
+  }
+
+  .hotelDetailPrice h1 {
+    font-size: 1.5rem; /* Reduce price title font size */
+  }
+
+  .hotelDetailPrice h2 {
+    font-size: 1.2rem; /* Reduce price subtitle font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .hotelHeader {
+    padding: 0 10px; /* Add padding for small screens */
+  }
+
+  .hotelTitle {
+    font-size: 1.5rem; /* Further reduce title font size */
+  }
+
+  .hotelLocation {
+    font-size: 0.9rem; /* Further reduce location font size */
+  }
+
+  .hotelRenting {
+    font-size: 1.2rem; /* Further adjust renting section font size */
+  }
+
+  .hotelDetailPrice h1 {
+    font-size: 1.2rem; /* Further reduce price title font size */
+  }
+
+  .btn {
+    padding: 8px 16px; /* Adjust button padding */
+  }
+}

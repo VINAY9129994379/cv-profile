@@ -1,0 +1,70 @@
+/* Featured.css */
+
+.featured {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.featureItem {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featureItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.featureTitles {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.featureTitles h1 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.featureTitles h2 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.featureItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .featured {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .featureItem {
+    max-width: none;
+    width: 100%;
+  }
+
+  .featureTitles h1 {
+    font-size: 18px;
+  }
+
+  .featureTitles h2 {
+    font-size: 14px;
+  }
+}

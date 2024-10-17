@@ -1,0 +1,95 @@
+/* Navbar.css */
+.navbar {
+  background-color: #333; /* Dark background for the navbar */
+  padding: 10px 0; /* Vertical padding */
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between logo and nav items */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: background-color 0.3s ease; /* Smooth background color change */
+}
+
+.navbar:hover {
+  background-color: #444; /* Darker background on hover */
+}
+
+.logo {
+  margin-left: 20px; /* Left margin for logo */
+}
+
+.navulist {
+  list-style-type: none; /* Remove default list styles */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  display: flex; /* Flexbox for horizontal list items */
+}
+
+.navlist {
+  margin: 0 15px; /* Spacing between items */
+  position: relative; /* Position for animated underline */
+}
+
+.navlink {
+  text-decoration: none; /* Remove underline */
+  color: #fff; /* White text color */
+  font-size: 16px; /* Font size */
+  font-weight: 500; /* Semi-bold text */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.navlink:hover {
+  color: #f4a261; /* Light color on hover */
+  transform: scale(1.1); /* Slightly enlarge the link */
+}
+
+.navlink::before {
+  content: ''; /* Empty content for pseudo-element */
+  position: absolute; /* Absolute positioning */
+  bottom: -5px; /* Position below the text */
+  left: 0; /* Align to the left */
+  width: 100%; /* Full width of the list item */
+  height: 2px; /* Height of the underline */
+  background-color: #f4a261; /* Underline color */
+  transform: scaleX(0); /* Start with zero width */
+  transition: transform 0.3s ease; /* Smooth transition for underline */
+}
+
+.navlink:hover::before {
+  transform: scaleX(1); /* Expand the underline on hover */
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack logo and nav items vertically */
+    padding: 15px 0; /* Increase padding for mobile */
+  }
+
+  .logo {
+    margin-left: 0; /* Center the logo */
+    margin-bottom: 10px; /* Add margin below the logo */
+  }
+
+  .navulist {
+    flex-direction: column; /* Stack nav items vertically */
+    align-items: center; /* Center align nav items */
+  }
+
+  .navlist {
+    margin: 10px 0; /* Increase spacing between vertical items */
+  }
+
+  .navlink {
+    font-size: 18px; /* Increase font size for better readability on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px; /* Further reduce padding on very small screens */
+  }
+
+  .navlink {
+    font-size: 16px; /* Keep text smaller on small screens */
+  }
+}

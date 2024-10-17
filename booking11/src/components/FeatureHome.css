@@ -1,0 +1,98 @@
+.fp {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 20px;
+  flex-direction: row;
+}
+
+.fpItem {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: calc(50% - 20px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+.fpImg {
+  width: 353px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.fpName {
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  margin: 10px;
+}
+
+.fpCity {
+  font-size: 16px;
+  color: #555;
+  display: block;
+  margin: 0 10px;
+}
+
+.fpPrice {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin: 0 10px;
+}
+
+.fpRating {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.fpRating button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.fpRating span {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .fpItem {
+    width: 100%;
+  }
+
+  .fpImg {
+    width: 100%;
+    height: auto;
+  }
+
+  .fpName {
+    font-size: 16px;
+  }
+
+  .fpCity,
+  .fpPrice {
+    font-size: 14px;
+  }
+
+  .fpRating button {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .fpRating span {
+    font-size: 12px;
+  }
+}

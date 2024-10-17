@@ -1,0 +1,81 @@
+.navbar {
+  background-color: #007bff;
+  padding: 10px 20px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navItems {
+  display: flex;
+  gap: 100px;
+}
+
+.navButton {
+  margin-left: 20px;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #a8c5ef;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.navButton:hover {
+  background-color: #f1f1f1;
+}
+
+.navButton:focus {
+  outline: none;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .navItems {
+    gap: 50px; /* Reduce gap between navigation items */
+  }
+
+  .navButton {
+    font-size: 18px; /* Slightly reduce font size for buttons */
+    padding: 5px 8px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .navContainer {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .navItems {
+    flex-direction: column; /* Change to column layout */
+    gap: 20px; /* Reduce gap for vertical layout */
+  }
+
+  .logo {
+    font-size: 20px; /* Reduce logo font size for small screens */
+  }
+
+  .navButton {
+    width: 100%; /* Make buttons full width */
+    margin-left: 0; /* Remove margin for buttons */
+    text-align: center; /* Center text in buttons */
+  }
+}

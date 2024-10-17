@@ -1,0 +1,70 @@
+.headerList {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  background-color: #007bff;
+  border-bottom: 1px solid #ddd;
+}
+
+.headerListItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #333;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.headerListItem:hover {
+  color: #d9dfe6;
+}
+
+.headerListItem svg {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.headerListItem span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .headerList {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    padding: 15px; /* Increased padding for better touch targets */
+  }
+
+  .headerListItem {
+    padding: 15px; /* Increase padding for better touch interaction */
+  }
+
+  .headerListItem span {
+    font-size: 16px; /* Increase font size for better readability */
+  }
+
+  .headerListItem svg {
+    font-size: 30px; /* Increase icon size for better visibility */
+  }
+}
+
+@media (max-width: 480px) {
+  .headerList {
+    padding: 10px; /* Adjust padding for smaller devices */
+  }
+
+  .headerListItem {
+    padding: 10px; /* Maintain padding but ensure it fits on small screens */
+  }
+
+  .headerListItem span {
+    font-size: 14px; /* Reset font size for very small screens */
+  }
+
+  .headerListItem svg {
+    font-size: 24px; /* Keep icon size appropriate for mobile */
+  }
+}
